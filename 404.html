@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="VOID — signal lost." />
+    <title>404 — VOID</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        min-height: 100%;
+        background: #050505;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        opacity: 0.07;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+        background-size: 70px 70px;
+        pointer-events: none;
+      }
+      .wrap {
+        text-align: center;
+        padding: 30px;
+        position: relative;
+      }
+      .brand {
+        position: absolute;
+        top: 28px;
+        left: 6vw;
+        font-size: 23px;
+        font-weight: 1000;
+        letter-spacing: -2px;
+      }
+      .code {
+        font-size: clamp(130px, 35vw, 520px);
+        line-height: 0.7;
+        font-weight: 1000;
+        letter-spacing: -0.12em;
+        position: relative;
+        animation: arrive 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      .code::before,
+      .code::after {
+        content: "404";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+      }
+      .code::before {
+        animation: glitch 4s infinite;
+      }
+      .code::after {
+        animation: glitch 4s 0.12s infinite reverse;
+      }
+      .eyebrow {
+        margin-top: 50px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+      .message {
+        margin: 17px auto 29px;
+        max-width: 390px;
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+      .button {
+        display: inline-block;
+        padding: 15px 24px;
+        border: 1px solid #fff;
+        background: #fff;
+        color: #000;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: 0.3s;
+      }
+      .button:hover {
+        background: transparent;
+        color: #fff;
+        transform: translateY(-4px);
+      }
+      @keyframes arrive {
+        from {
+          opacity: 0;
+          transform: scale(1.18);
+          filter: blur(15px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+          filter: none;
+        }
+      }
+      @keyframes glitch {
+        0%,
+        90%,
+        100% {
+          opacity: 0;
+          transform: none;
+        }
+        92% {
+          opacity: 0.45;
+          transform: translate(-8px, 3px);
+        }
+        94% {
+          opacity: 0;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="brand" href="index.html">VOID</a>
+    <main class="wrap">
+      <h1 class="code">404</h1>
+      <p class="eyebrow">Signal lost / Sector unknown</p>
+      <p class="message">
+        You found a corridor that does not exist. The rest of the VOID is still
+        waiting.
+      </p>
+      <a class="button" href="index.html">Return to the void</a>
+    </main>
+  </body>
+</html>
