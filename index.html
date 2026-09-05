@@ -9,7 +9,6 @@
       content="VOID — gaming clips, cinematic edits and everything beyond the screen."
     />
     <title>VOID — Enter the Void</title>
-    <link rel="stylesheet" href="phase2.css" />
     <style>
       :root {
         --ink: #050505;
@@ -1120,14 +1119,7 @@
           </p>
         </div>
         <div class="edit-grid">
-          <article
-            class="edit-card featured-edit"
-            data-reveal
-            data-project-id="featured"
-            tabindex="0"
-            role="button"
-            aria-label="Open Featured Edit project"
-          >
+          <article class="edit-card featured-edit" data-reveal>
             <div class="media media--edit">
               <span class="video-chip">Featured Edit / Placeholder</span
               ><span class="media-mark">VOID</span
@@ -1145,14 +1137,7 @@
               <span class="view-link">View project</span>
             </div>
           </article>
-          <article
-            class="edit-card"
-            data-reveal
-            data-project-id="velocity"
-            tabindex="0"
-            role="button"
-            aria-label="Open Velocity project"
-          >
+          <article class="edit-card" data-reveal>
             <div class="media">
               <span class="video-chip">Gaming Edit</span
               ><span class="media-mark">01</span
@@ -1167,14 +1152,7 @@
               <span class="view-link">View project</span>
             </div>
           </article>
-          <article
-            class="edit-card"
-            data-reveal
-            data-project-id="afterimage"
-            tabindex="0"
-            role="button"
-            aria-label="Open Afterimage project"
-          >
+          <article class="edit-card" data-reveal>
             <div class="media">
               <span class="video-chip">Creator Edit</span
               ><span class="media-mark">02</span
@@ -1283,134 +1261,11 @@
       <section class="statement" data-reveal>
         <h2><span>Nothing</span>is<br />impossible</h2>
       </section>
-      <section id="profile" class="stats-section">
-        <div class="section-head" data-reveal>
-          <div>
-            <p class="section-label">06 / Creator Profile</p>
-            <h2 class="section-title">Signal<br />data</h2>
-          </div>
-          <p class="section-note">
-            Placeholder metrics are centralized in the VOID configuration and
-            only animate when this dashboard enters view.
-          </p>
-        </div>
-        <div
-          class="stats-grid"
-          id="stats-grid"
-          aria-label="Creator statistics"
-        ></div>
-      </section>
     </main>
-    <aside class="terminal-dock" aria-label="Optional VOID terminal">
-      <button class="terminal-launch" id="terminal-launch" type="button">
-        <span class="status-dot"></span> Open terminal <kbd>~</kbd>
-      </button>
-    </aside>
-    <section
-      class="void-terminal"
-      id="void-terminal"
-      aria-hidden="true"
-      aria-label="VOID terminal"
-    >
-      <div
-        class="terminal-shell"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="terminal-title"
-      >
-        <div class="terminal-bar">
-          <span id="terminal-title">VOID // SYSTEM CONSOLE</span
-          ><button
-            class="terminal-close"
-            type="button"
-            aria-label="Close terminal"
-          >
-            ×
-          </button>
-        </div>
-        <div
-          class="terminal-output"
-          id="terminal-output"
-          aria-live="polite"
-        ></div>
-        <form class="terminal-form" id="terminal-form">
-          <label for="terminal-input">VOID@NODE:~$</label
-          ><input
-            id="terminal-input"
-            autocomplete="off"
-            autocapitalize="none"
-            spellcheck="false"
-            placeholder="type help"
-          /><span class="terminal-cursor" aria-hidden="true"></span>
-        </form>
-      </div>
-    </section>
-    <section class="project-modal" id="project-modal" aria-hidden="true">
-      <div class="project-modal__backdrop" data-close-modal></div>
-      <article
-        class="project-modal__panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="project-modal-title"
-      >
-        <button
-          class="modal-close"
-          type="button"
-          data-close-modal
-          aria-label="Close project"
-        >
-          ×
-        </button>
-        <div class="project-modal__visual">
-          <span class="project-modal__mark" id="project-modal-mark">VOID</span
-          ><span class="play" aria-hidden="true">▶</span>
-        </div>
-        <div class="project-modal__body">
-          <p class="section-label" id="project-modal-category">
-            Project / Placeholder
-          </p>
-          <h2 id="project-modal-title">Featured Edit</h2>
-          <p id="project-modal-description"></p>
-          <dl class="project-meta">
-            <div>
-              <dt>Date</dt>
-              <dd id="project-modal-date"></dd>
-            </div>
-            <div>
-              <dt>Software</dt>
-              <dd id="project-modal-software"></dd>
-            </div>
-            <div>
-              <dt>Format</dt>
-              <dd id="project-modal-format"></dd>
-            </div>
-          </dl>
-          <button
-            class="button"
-            id="project-action"
-            type="button"
-            disabled
-            aria-disabled="true"
-          >
-            View project
-          </button>
-          <div class="modal-nav">
-            <button type="button" id="project-prev">← Previous</button
-            ><button type="button" id="project-next">Next →</button>
-          </div>
-        </div>
-      </article>
-    </section>
-    <div class="void-transition" id="void-transition" aria-hidden="true">
-      <span>VOID</span>
-    </div>
     <footer>
-      <a href="#top" class="logo" data-void-secret aria-label="Back to top"
-        >VOID</a
-      >
+      <a href="#top" class="logo" aria-label="Back to top">VOID</a>
       <p>© 2026 VOID — See you in the void.</p>
     </footer>
-    <script src="phase2.js" defer></script>
     <script>
       // Central configuration: replace only these empty strings with verified official URLs.
       const VOID_CONFIG = {
