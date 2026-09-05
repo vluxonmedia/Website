@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#050505" />
+    <title>Enter the VOID</title>
+    <link rel="stylesheet" href="phase2.css" />
+    <style>
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+        background: #050505;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        overflow: hidden;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 70px 70px;
+      }
+      .room {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: 7%;
+        position: relative;
+      }
+      .room::before {
+        content: "";
+        position: absolute;
+        width: min(70vw, 700px);
+        aspect-ratio: 1;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        box-shadow: 0 0 120px rgba(255, 255, 255, 0.08);
+        animation: spin 20s linear infinite;
+      }
+      .room__content {
+        position: relative;
+        text-align: center;
+      }
+      .room__label {
+        font-size: 10px;
+        letter-spacing: 5px;
+        opacity: 0.5;
+      }
+      .room h1 {
+        margin: 18px 0;
+        font-size: clamp(100px, 24vw, 340px);
+        line-height: 0.7;
+        letter-spacing: -0.12em;
+      }
+      .room__copy {
+        max-width: 430px;
+        margin: 35px auto;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 12px;
+        line-height: 1.7;
+      }
+      .room__links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .room__links a {
+        padding: 13px 17px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 9px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        transition: 0.3s;
+      }
+      .room__links a:hover {
+        background: #fff;
+        color: #000;
+        transform: translateY(-4px);
+      }
+      .room__status {
+        position: absolute;
+        bottom: 35px;
+        font-size: 9px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .room::before {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="room">
+      <div class="room__content">
+        <p class="room__label">Experimental node / 01</p>
+        <h1>VOID</h1>
+        <p class="room__copy">
+          You reached the space between the clips and the signal. Explore
+          freely, then return when you are ready.
+        </p>
+        <nav class="room__links">
+          <a href="index.html#clips">Clips</a
+          ><a href="index.html#edits">Projects</a
+          ><a href="index.html#social">Socials</a
+          ><a href="index.html">Exit node</a>
+        </nav>
+      </div>
+      <p class="room__status">
+        ● VOID // ONLINE — terminal signal available on home
+      </p>
+    </main>
+  </body>
+</html>
